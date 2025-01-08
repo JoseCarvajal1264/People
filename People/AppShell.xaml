@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="People.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:People"
+    Shell.FlyoutBehavior="Disabled">
+
+    <!-- Definir el título con imagen -->
+    <Shell.TitleView>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="Center" Padding="10">
+            <Image
+                Source="hola.png"
+                HeightRequest="40"
+                WidthRequest="40"
+                Aspect="AspectFill"
+                VerticalOptions="Center"
+                HorizontalOptions="Start" />
+            <Label
+                Text="José Carvajal, 20 años"
+                FontSize="16"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+                Margin="50,0,0,0" />
+            <!-- Ajusta el margen a la derecha de la imagen -->
+        </Grid>
+    </Shell.TitleView>
+
+    <ShellContent
+        Title="José Carvajal, 19 años"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+</Shell>
